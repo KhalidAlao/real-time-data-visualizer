@@ -4,15 +4,16 @@ import Controls from './components/Controls';
 import ErrorDisplay from './components/ErrorDisplay';
 import './App.css';
 
-
 function App() {
   return (
     <DataProvider>
-      <div className="App">
+      <div className="container">
         <h1>Bitcoin Price Tracker</h1>
-        <Controls />
-        <ErrorDisplay />
-        <Chart />
+        <div className="card">
+          <Controls />
+          <ErrorDisplay />
+          <Chart />
+        </div>
       </div>
     </DataProvider>
   );

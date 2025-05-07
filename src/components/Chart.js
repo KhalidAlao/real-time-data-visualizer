@@ -24,7 +24,7 @@ ChartJS.register(
 const Chart = () => {
   const { data } = useData();
 
-  if (!data || data.length === 0) return <p>Loading data please wait... </p>;
+  if (!data || data.length === 0) return <div className="loader"></div>;
 
   const chartData = {
     labels: data.map((d) => d.time),
@@ -48,7 +48,11 @@ const Chart = () => {
     },
   };
 
-  return <Line data={chartData} options={options} />;
+  return (
+    <div className="card">
+      <Line data={chartData} options={options} />
+    </div>
+  );
 };
 
 export default Chart;

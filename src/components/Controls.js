@@ -1,27 +1,21 @@
 import { useData } from '../context/DataContext';
 
 const Controls = () => {
+  const { intervalTime, setIntervalTime } = useData();
 
-    const { intervalTime, setIntervalTime } = useData();
-
-    return (
-
-        <div className="controls">
-           <label>Update Interval: </label>
-           <select
+  return (
+    <div className="controls">
+      <label>Update Interval: </label>
+      <select
         value={intervalTime}
         onChange={(e) => setIntervalTime(Number(e.target.value))}
       >
-        <option value={10000}>10 Seconds</option>
         <option value={15000}>15 Seconds</option>
         <option value={30000}>30 Seconds</option>
-        <option value={450000}>45 Seconds</option>
+        <option value={45000}>45 Seconds</option>
       </select>
-
-        </div>
-    )
-
-
-}
+    </div>
+  );
+};
 
 export default Controls;
