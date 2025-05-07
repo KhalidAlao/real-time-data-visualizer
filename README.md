@@ -24,4 +24,6 @@ A sleek, real-time Bitcoin price tracker built with React and styled with custom
    ```bash
    git clone https://github.com/KhalidAlao/real-time-data-visualizer.git
    cd real-time-data-visualizer
+   npm install
+   npm start
    
