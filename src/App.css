@@ -1,16 +1,16 @@
 /* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3a3a3a; /* Lightened background */
+  color: #ffffff;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-top: 20px;
+  padding: 40px;
+  font-size: 2.8rem;
+  margin-top: 10px;
   color: #00bcd4;
 }
 
@@ -24,28 +24,28 @@ h1 {
 
 /* Card Styling */
 .card {
-  background-color: #1f1f1f;
-  padding: 30px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
+  background-color: #2a2a2a;
+  padding: 60px; /* Increased padding */
+  border-radius: 14px;
+  width: 90%;
+  max-width: 700px; /* Wider card */
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .card .price {
-  font-size: 3rem;
-  margin: 10px 0;
-  color: #ff9800;
+  font-size: 5rem; /* Larger real-time price */
+  margin: 20px 0;
+  color: #ffb74d;
 }
 
 .card .timestamp {
-  font-size: 1rem;
-  color: #888888;
+  font-size: 1.8rem; /* Larger timestamp */
+  color: #cccccc;
 }
 
 .card .error {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #e53935;
 }
 
@@ -53,23 +53,23 @@ h1 {
 .controls {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .controls label {
-  font-size: 1rem;
-  margin-right: 10px;
+  font-size: 1.2rem;
   color: #ffffff;
 }
 
 .controls select {
-  padding: 8px 12px;
-  background-color: #333333;
+  padding: 10px 14px;
+  background-color: #444444;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
@@ -83,8 +83,8 @@ h1 {
   border: 6px solid #f3f3f3;
   border-top: 6px solid #00bcd4;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   animation: spin 2s linear infinite;
   margin: 20px auto;
 }
@@ -98,7 +98,7 @@ h1 {
 /* Error Message Styling */
 .error-message {
   color: #f44336;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 20px;
   text-align: center;
 }
