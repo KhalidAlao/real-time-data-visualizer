@@ -10,20 +10,29 @@ export const DataProvider = ({ children }) => {
   const [intervalTime, setIntervalTime] = useState(5000);
   const [error, setError] = useState(null);
 
-  // Asynchronous CoinCap API request
+  // Asynchronous CoinGecko API request
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://api.coincap.io/v2/assets/bitcoin');
+      const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+      console.log(response.data); // Log the full response
+  
+      if (!response.data || !response.data.bitcoin) {
+        throw new Error('Invalid API response');
+      }
+  
       const newDataPoint = {
         time: new Date().toLocaleTimeString(),
-        price: parseFloat(response.data.data.priceUsd),
+        price: parseFloat(response.data.bitcoin.usd),
       };
-      setData((prevData) => [...prevData.slice(-19), newDataPoint]); // Keep the last 20 datapoints
+  
+      setData((prevData) => [...prevData.slice(-19), newDataPoint]);
       setError(null);
     } catch (err) {
-      setError('Failed to fetch data. Please check your connection.');
+      console.error('Error fetching data:', err);
+      setError('Failed to fetch data. Please check your connection or API endpoint.');
     }
   };
+  
 
   useEffect(() => {
     fetchData(); // Fetch once on mount immediately

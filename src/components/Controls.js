@@ -12,9 +12,10 @@ const Controls = () => {
         value={intervalTime}
         onChange={(e) => setIntervalTime(Number(e.target.value))}
       >
-        <option value={1000}>1 Second</option>
-        <option value={5000}>5 Seconds</option>
         <option value={10000}>10 Seconds</option>
+        <option value={15000}>15 Seconds</option>
+        <option value={30000}>30 Seconds</option>
+        <option value={450000}>45 Seconds</option>
       </select>
 
         </div>

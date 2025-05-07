@@ -2,6 +2,8 @@ import { DataProvider } from './context/DataContext';
 import Chart from './components/Chart';
 import Controls from './components/Controls';
 import ErrorDisplay from './components/ErrorDisplay';
+import './App.css';
+
 
 function App() {
   return (

@@ -24,6 +24,8 @@ ChartJS.register(
 const Chart = () => {
   const { data } = useData();
 
+  if (!data || data.length === 0) return <p>Loading data please wait... </p>;
+
   const chartData = {
     labels: data.map((d) => d.time),
     datasets: [
