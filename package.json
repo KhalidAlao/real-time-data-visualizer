@@ -1,6 +1,6 @@
 {
   "name": "real-time-data-visualizer",
-  "homepage": "https://khalidalao.github.io/bitcoin-price-tracker",
+  "homepage": "https://khalidalao.github.io/real-time-data-visualizer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +24,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  
   },
   "eslintConfig": {
     "extends": [
