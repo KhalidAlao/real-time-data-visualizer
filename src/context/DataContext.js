@@ -9,7 +9,7 @@ export const DataProvider = ({ children }) => {
   const [intervalTime, setIntervalTime] = useState(5000);
   const [error, setError] = useState(null);
 
-  // Wrap fetchData in useCallback to memoize it
+  
   const fetchData = useCallback(async () => {
     try {
       const response = await axios.get(
@@ -21,7 +21,7 @@ export const DataProvider = ({ children }) => {
           time: new Date().toLocaleTimeString(),
           price: coin.current_price,
         };
-        // Use previous state via functional update
+        
         acc[coin.id] = [...(currencyData[coin.id] || []).slice(-19), newDataPoint];
         return acc;
       }, {});
