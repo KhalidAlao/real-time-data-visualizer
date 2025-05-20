@@ -1,6 +1,6 @@
-# 📈 Bitcoin Price Tracker
+# 📈 Crytocurrency Price Tracker
 
-A sleek, real-time Bitcoin price tracker built with React and styled with custom CSS. It fetches live cryptocurrency data using the CoinCap API and displays the current BTC price in USD.
+A sleek, real-time Bitcoin price tracker built with React and styled with custom CSS. It fetches live cryptocurrency data using the CoinGecko API and displays the current BTC price in USD.
 
 ## 🚀 Features
 
