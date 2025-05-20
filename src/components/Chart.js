@@ -1,3 +1,4 @@
+// src/components/Chart.js
 import { Line } from 'react-chartjs-2';
 import { useData } from '../context/DataContext';
 import {
@@ -11,6 +12,15 @@ import {
   Legend,
 } from 'chart.js';
 
+// Predefined colors for each currency
+const currencyColors = {
+  bitcoin: 'rgb(75, 192, 192)',
+  ethereum: 'rgb(153, 102, 255)',
+  solana: 'rgb(255, 159, 64)',
+  cardano: 'rgb(255, 99, 132)',
+  
+};
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,37 +32,33 @@ ChartJS.register(
 );
 
 const Chart = () => {
-  const { data } = useData();
+  const { currencyData, selectedCurrencies } = useData();
 
-  if (!data || data.length === 0) return <div className="loader"></div>;
-
+  // Generate datasets for all selected currencies
   const chartData = {
-    labels: data.map((d) => d.time),
-    datasets: [
-      {
-        label: 'Bitcoin Price (USD)',
-        data: data.map((d) => d.price),
-        borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1,
-      },
-    ],
+    labels: currencyData[selectedCurrencies[0]]?.map((d) => d.time) || [],
+    datasets: selectedCurrencies.map((currency) => ({
+      label: `${currency.toUpperCase()} Price (USD)`,
+      data: currencyData[currency]?.map((d) => d.price) || [],
+      borderColor: currencyColors[currency],
+      tension: 0.1,
+    })),
   };
 
   const options = {
     responsive: true,
     plugins: {
+      legend: {
+        position: 'top',
+      },
       title: {
         display: true,
-        text: 'Real-time Bitcoin Price',
+        text: 'Real-time Cryptocurrency Prices',
       },
     },
   };
 
-  return (
-    <div className="card">
-      <Line data={chartData} options={options} />
-    </div>
-  );
+  return <Line data={chartData} options={options} />;
 };
 
 export default Chart;

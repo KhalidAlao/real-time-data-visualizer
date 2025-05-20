@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #3a3a3a; /* Lightened background */
+  background-color: #3a3a3a; 
   color: #ffffff;
 }
 
@@ -25,22 +25,22 @@ h1 {
 /* Card Styling */
 .card {
   background-color: #2a2a2a;
-  padding: 60px; /* Increased padding */
+  padding: 60px; 
   border-radius: 14px;
   width: 90%;
-  max-width: 700px; /* Wider card */
+  max-width: 700px; 
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .card .price {
-  font-size: 5rem; /* Larger real-time price */
+  font-size: 5rem; 
   margin: 20px 0;
   color: #ffb74d;
 }
 
 .card .timestamp {
-  font-size: 1.8rem; /* Larger timestamp */
+  font-size: 1.8rem; 
   color: #cccccc;
 }
 
@@ -76,6 +76,21 @@ h1 {
 .controls select:focus {
   outline: none;
   border: 2px solid #00bcd4;
+}
+
+/* Currency Selector */
+.currency-selector {
+  margin: 20px 0;
+}
+
+.currency-selector label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.currency-selector input {
+  margin-right: 8px;
 }
 
 /* Loader */
