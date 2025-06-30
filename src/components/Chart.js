@@ -12,8 +12,8 @@ import {
   Legend,
 } from 'chart.js';
 
-// Predefined colors for each currency
-const currencyColors = {
+// Predefined colours for each currency
+const currencyColours = {
   bitcoin: 'rgb(75, 192, 192)',
   ethereum: 'rgb(153, 102, 255)',
   solana: 'rgb(255, 159, 64)',
@@ -40,7 +40,7 @@ const Chart = () => {
     datasets: selectedCurrencies.map((currency) => ({
       label: `${currency.toUpperCase()} Price (USD)`,
       data: currencyData[currency]?.map((d) => d.price) || [],
-      borderColor: currencyColors[currency],
+      borderColor: currencyColours[currency],
       tension: 0.1,
     })),
   };

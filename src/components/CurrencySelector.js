@@ -5,6 +5,7 @@ const currencies = ['bitcoin', 'ethereum', 'solana', 'cardano'];
 const CurrencySelector = () => {
   const { selectedCurrencies, setSelectedCurrencies } = useData();
 
+  // Add and removes a currency from selection
   const toggleCurrency = (currency) => {
     setSelectedCurrencies((prev) =>
       prev.includes(currency)
