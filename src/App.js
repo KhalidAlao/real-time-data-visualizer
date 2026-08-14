@@ -9,7 +9,7 @@ function App() {
   return (
     <DataProvider>
       <div className="container">
-        <h1>Crytocurrency Price Tracker</h1>
+        <h1>Cryptocurrency Price Tracker</h1>
         <div className="card">
         <CurrencySelector />
           <Controls />
